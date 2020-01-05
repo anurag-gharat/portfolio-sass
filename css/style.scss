@@ -1,0 +1,243 @@
+@import "mixins";
+@import "functions";
+$colors:(
+     primary:#fff,
+     secondary:#192A56,
+     tertiary:#dfe4ea,
+     text:#000
+);
+$font-sizes:(
+     primary:16px,
+     secondary:24px,
+     heading:36px
+);
+$total-width:100%;
+
+%margin-padding{
+     margin: 0px;
+     padding:0px;
+}
+
+%widespread{
+     height: auto;
+     width:$total-width;
+}
+//primary is normal white
+%text-primary{
+     font-size: map-get($map: $font-sizes, $key:primary );
+     color: map-get($map: $colors, $key:text );
+     font-family: cursive;
+}
+//secondary is heading 
+%text-secondary{
+     font-size: map-get($map: $font-sizes, $key:secondary );
+     color: map-get($map: $colors, $key:secondary );
+     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+     text-decoration: underline;
+}
+%text-heading{
+     font-size: map-get($map: $font-sizes, $key:heading );
+     color: map-get($map: $colors, $key:secondary );
+     font-family:Arial, Helvetica, sans-serif;
+}
+body{
+     margin: 0px;
+     padding: 0px;
+     background-color: map-get($map: $colors, $key:tertiary );
+     .container{
+          clip-path: polygon(50% 0%, 99% 0, 82% 100%, 18% 100%, 0 0);
+          height: 100vh;
+          width: 100%;
+          @include background_image("../images/PHOTOLIO.jpg");
+          margin:0px;
+          padding: 0px;
+     }
+     .company{
+          width: 100%;
+          height: auto;
+          .row{
+               display: flex;
+               background-color: map-get($map: $colors, $key:tertiary );
+               .half-section-img{
+                    display: flex;
+                    width:40%;
+                    padding: 5%;     
+               img{
+                    width: 100%;
+                    height: 100%;
+                    }
+               }
+               .half-section-details{
+                    width:60%;    
+                    padding: 5%;
+                    h1{
+                         @extend %text-heading;
+                    }
+                    p{
+                         @extend %text-primary
+                    }
+               }
+          }
+          
+     }
+
+     .about{
+          @extend %widespread;
+          //background-color: map-get($map: $colors, $key:secondary );
+          height: 400px;
+          text-align: center;
+          h1{
+               @extend %text-heading;
+          }
+          .part{
+               margin-top: 0px;
+               margin-bottom: 100px;
+               width: one-third($total-width);
+               float: left; 
+               img{
+                    border-radius: 50%;
+                    width: 200px;
+                    height: 150px;
+                    position: center;
+               }
+               .details{
+                    padding: 0px 15px;
+                    h2{
+                         @extend %text-secondary;
+                    }
+                    p{
+                         @extend %text-primary;
+                    }
+               }
+          }
+          
+     }
+     .portfolioheading{
+          text-align: center;
+          h1{
+               @extend %text-heading;   
+          }
+     }
+     .portfolio{
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: flex-start;
+          margin-right: 5%;
+          margin-left: 5%;
+          .big{
+               flex: 1 1 450px;
+               img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+               }
+               
+               }
+          .normal{
+               flex: 1 1 250px;
+               img{
+               width: 100%;
+               height: 100%;
+               object-fit: cover;
+               }
+               
+          }
+
+     }
+
+
+     .contact{
+          @extend %widespread;
+          margin: 0px;
+          padding: 0px;
+          background-color: white;
+          .heading{
+               @extend %widespread;
+               height: 100px;
+               float: left;
+               margin-top: 30px;
+               margin-bottom:30px;
+          }
+          .left{
+               float:left;
+               width:one-half($total-width);
+               height: auto;
+               .map{
+                    @include background_image("../images/map.jpg");
+                    height: 250px;
+                    width: 400px;
+                    margin: 20px 20px;
+               }
+               .details{
+                    margin: 20px;
+               }
+          }
+          .right{
+               float:right;
+               width:one-half($total-width);
+               height: 400px;
+               margin-top: 0px;
+               text-align: center; 
+               input{
+                    border: none;
+                    height: 40px;
+                    margin-top: 10px;
+                    width: 80%;
+                    text-align: center;
+                    border:.5px solid gray;
+                    color: black;
+               }   
+               button{
+                    width: auto;
+                    height: 40px;
+                    padding: 10px 25px;
+                    font-size: map-get($map: $font-sizes, $key:primary);
+                    margin: 15px;
+                    border-radius: 20px;
+                    border:none;
+                    
+
+               }
+          }
+     }
+     footer{
+          width: 100%;
+          height: auto;
+          display: flex;
+          text-align: center;
+          padding: 0px;
+          flex-direction: column;
+          margin:0px;
+          background-color: darken(map-get($map: $colors, $key:secondary ),10);
+          .social-media{
+                    margin: 50px;
+                    .fa{
+                    width: 50px;
+                    height: 50px;
+                    font-size: 40px;
+                    color:map-get($map: $colors, $key: primary);
+                    }
+                    .fa:hover{
+                         color:#74B9FF;
+                    }
+          }
+          .brand{
+               background-color:darken(map-get($map: $colors, $key:secondary ),60);
+               width: 100%;
+               color:white;
+               padding: 0px;
+               font-size: map-get($map: $font-sizes, $key:secondary );
+               h5,h6{
+                    @extend %margin-padding;
+                    padding: 5px;
+
+               }
+
+
+          }
+     }
+
+
+
+     
+ }

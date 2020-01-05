@@ -1,0 +1,162 @@
+body footer .brand h5, body footer .brand h6 {
+  margin: 0px;
+  padding: 0px; }
+
+body .about, body .contact, body .contact .heading {
+  height: auto;
+  width: 100%; }
+
+body .company .row .half-section-details p, body .about .part .details p {
+  font-size: 16px;
+  color: #000;
+  font-family: cursive; }
+
+body .about .part .details h2 {
+  font-size: 24px;
+  color: #192A56;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  text-decoration: underline; }
+
+body .company .row .half-section-details h1, body .about h1, body .portfolioheading h1 {
+  font-size: 36px;
+  color: #192A56;
+  font-family: Arial, Helvetica, sans-serif; }
+
+body {
+  margin: 0px;
+  padding: 0px;
+  background-color: #dfe4ea; }
+  body .container {
+    clip-path: polygon(50% 0%, 99% 0, 82% 100%, 18% 100%, 0 0);
+    height: 100vh;
+    width: 100%;
+    background-image: url("../images/PHOTOLIO.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin: 0px;
+    padding: 0px; }
+  body .company {
+    width: 100%;
+    height: auto; }
+    body .company .row {
+      display: flex;
+      background-color: #dfe4ea; }
+      body .company .row .half-section-img {
+        display: flex;
+        width: 40%;
+        padding: 5%; }
+        body .company .row .half-section-img img {
+          width: 100%;
+          height: 100%; }
+      body .company .row .half-section-details {
+        width: 60%;
+        padding: 5%; }
+  body .about {
+    height: 400px;
+    text-align: center; }
+    body .about .part {
+      margin-top: 0px;
+      margin-bottom: 100px;
+      width: 33.3333333333%;
+      float: left; }
+      body .about .part img {
+        border-radius: 50%;
+        width: 200px;
+        height: 150px;
+        position: center; }
+      body .about .part .details {
+        padding: 0px 15px; }
+  body .portfolioheading {
+    text-align: center; }
+  body .portfolio {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-right: 5%;
+    margin-left: 5%; }
+    body .portfolio .big {
+      flex: 1 1 450px; }
+      body .portfolio .big img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; }
+    body .portfolio .normal {
+      flex: 1 1 250px; }
+      body .portfolio .normal img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; }
+  body .contact {
+    margin: 0px;
+    padding: 0px;
+    background-color: white; }
+    body .contact .heading {
+      height: 100px;
+      float: left;
+      margin-top: 30px;
+      margin-bottom: 30px; }
+    body .contact .left {
+      float: left;
+      width: 50%;
+      height: auto; }
+      body .contact .left .map {
+        background-image: url("../images/map.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        height: 250px;
+        width: 400px;
+        margin: 20px 20px; }
+      body .contact .left .details {
+        margin: 20px; }
+    body .contact .right {
+      float: right;
+      width: 50%;
+      height: 400px;
+      margin-top: 0px;
+      text-align: center; }
+      body .contact .right input {
+        border: none;
+        height: 40px;
+        margin-top: 10px;
+        width: 80%;
+        text-align: center;
+        border: .5px solid gray;
+        color: black; }
+      body .contact .right button {
+        width: auto;
+        height: 40px;
+        padding: 10px 25px;
+        font-size: 16px;
+        margin: 15px;
+        border-radius: 20px;
+        border: none; }
+  body footer {
+    width: 100%;
+    height: auto;
+    display: flex;
+    text-align: center;
+    padding: 0px;
+    flex-direction: column;
+    margin: 0px;
+    background-color: #0e172e; }
+    body footer .social-media {
+      margin: 50px; }
+      body footer .social-media .fa {
+        width: 50px;
+        height: 50px;
+        font-size: 40px;
+        color: #fff; }
+      body footer .social-media .fa:hover {
+        color: #74B9FF; }
+    body footer .brand {
+      background-color: black;
+      width: 100%;
+      color: white;
+      padding: 0px;
+      font-size: 24px; }
+      body footer .brand h5, body footer .brand h6 {
+        padding: 5px; }
+
+/*# sourceMappingURL=style.css.map */

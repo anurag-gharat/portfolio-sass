@@ -1,0 +1,13 @@
+@mixin background_image($address){
+    background-image: url($address);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    
+}
+@mixin button_normal($bgcolor,$color){
+    padding: 10px 20px;
+    border:none;
+    background-color: $bgcolor;
+    color: $color;
+}
